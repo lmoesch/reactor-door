@@ -116,7 +116,6 @@ export class WavPlayer {
                 if (this._called_stop === true) {
                     resolve();
                 } else {
-                    console.log(code)
                     if (code === 0) {
                         
                         if (sync) {
@@ -135,8 +134,8 @@ export class WavPlayer {
 
     stop() {
         this._called_stop = true;
-        this._proc.removeAllListeners('close');
         if (this._proc) {
+            this._proc.removeAllListeners('close');
             this._proc.kill();
         }
     };
