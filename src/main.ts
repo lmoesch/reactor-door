@@ -53,3 +53,5 @@ s2.watch(async (err, value) => {
         }
     }
 })
+
+console.log('Reactor-door application started')
